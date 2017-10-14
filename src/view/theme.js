@@ -6,6 +6,13 @@ const darkPurple = 'rgba(56, 24, 47, 1)'
 const thistle = 'rgba(211, 192, 205, 1)'
 const linen = 'rgba(248, 244, 227, 1)'
 
+const containerPadding = `
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-left: 20;
+  padding-right: 20;
+`
+
 export const theme = {
   colors: {
     primary: darkPurple,
@@ -13,7 +20,8 @@ export const theme = {
     highlight: mistyRose,
     baseBg: linen,
     secondaryBg: thistle
-  }
+  },
+  containerPadding
 }
 
 // Simple helper function, takes in any number of props mapping to properties within the theme

@@ -2,28 +2,16 @@
 import React from 'react'
 import styled from 'styled-components/native'
 
-import {getTheme} from './theme'
-
 import {StatusBar} from 'react-native'
 
-const Container = styled.View`
-  display: flex;
-  background-color: ${getTheme('colors', 'baseBg')};
-`
-
-const Headline = styled.Text`
-  font-size: 20;
-  color: ${getTheme('colors', 'primary')};
-`
-
-const Text = styled.Text`
-  color: #333;
-`
+import {Wrapper} from 'view/Atoms'
+import {Headline} from 'view/Headline'
+import {AddTodo} from 'view/AddTodo'
 
 export const Todo = () => (
-  <Container>
+  <Wrapper>
     <StatusBar hidden />
-    <Headline>Todo App</Headline>
-    <Text>Does importing work? Thank goodness.</Text>
-  </Container>
+    <Headline>Todos Gone Native</Headline>
+    <AddTodo />
+  </Wrapper>
 )
