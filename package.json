@@ -14,7 +14,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "lint": "standard --fix"
   },
   "jest": {
     "preset": "jest-expo"
@@ -23,6 +24,8 @@
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "styled-components": "^2.2.1"
   }
 }
