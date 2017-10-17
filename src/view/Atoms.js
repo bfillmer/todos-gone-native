@@ -1,9 +1,8 @@
 
+import React from 'react'
 import styled from 'styled-components/native'
 
 import {getTheme} from 'view/theme'
-
-import {TextInput as DefaultTextInput} from 'react-native'
 
 export const Wrapper = styled.View`
   display: flex;
@@ -11,6 +10,12 @@ export const Wrapper = styled.View`
   background-color: ${getTheme('colors', 'baseBg')};
 `
 
-export const TextInput = styled(DefaultTextInput)`
+const HeadlineText = styled.Text`
+  font-size: 20;
+  font-weight: bold;
+  color: ${getTheme('colors', 'highlight')};
   ${getTheme('containerPadding')}
+  background-color: ${getTheme('colors', 'primary')};
 `
+
+export const Headline = () => <HeadlineText>Todos Gone Native</HeadlineText>

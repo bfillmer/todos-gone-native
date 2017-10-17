@@ -1,4 +1,4 @@
 
-import App from 'App'
+import {Root} from 'view/Root'
 
-export default App
+export default Root

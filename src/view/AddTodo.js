@@ -3,29 +3,67 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import styled from 'styled-components/native'
 
-import {TextInput} from 'view/Atoms'
+import DefaultButton from 'react-native-button'
 
-const AddInput = styled(TextInput)`
-  font-size: 20;
+import {getTheme} from 'view/theme'
+import {addTodo} from 'actions'
+
+const Wrapper = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 
+const AddInput = styled.TextInput`
+  flex: 1;
+  font-size: 20;
+  ${getTheme('containerPadding')}
+`
+
+const Button = styled(DefaultButton)`
+  font-size: 20;
+  text-align: center;
+  color: ${getTheme('colors', 'primary')};
+  margin-left: 5;
+  margin-right: 5;
+`
+
+const mapDispatchToProps = {
+  addTodo
+}
+
+// @TODO Swap to formik (https://github.com/jaredpalmer/formik) as it is the preferrable way to
+// build out forms.
 class Container extends Component {
   constructor (props) {
     super(props)
     this.state = {
       text: ''
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit () {
+    this.props.addTodo(this.state.text)
+    this.setState({
+      text: ''
+    })
   }
 
   render () {
     return (
-      <AddInput
-        placeholder='I need to do...'
-        onChangeText={(text) => this.setState({text})}
-        value={this.state.text}
-      />
+      <Wrapper>
+        <AddInput
+          placeholder='I need to do...'
+          onChangeText={(text) => this.setState({text})}
+          value={this.state.text}
+        />
+        <Button onPress={this.handleSubmit}>
+          Add
+        </Button>
+      </Wrapper>
     )
   }
 }
 
-export const AddTodo = connect()(Container)
+export const AddTodo = connect(null, mapDispatchToProps)(Container)
