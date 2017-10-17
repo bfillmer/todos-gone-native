@@ -55,8 +55,9 @@ class Container extends Component {
       <Wrapper>
         <AddInput
           placeholder='I need to do...'
-          onChangeText={(text) => this.setState({text})}
           value={this.state.text}
+          onChangeText={(text) => this.setState({text})}
+          onSubmitEditing={this.handleSubmit}
         />
         <Button onPress={this.handleSubmit}>
           Add

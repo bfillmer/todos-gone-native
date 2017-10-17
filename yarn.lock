@@ -5241,6 +5241,10 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
+redux-data-structures@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/redux-data-structures/-/redux-data-structures-0.1.6.tgz#b39313c4ef349d2243074995ea9141d11eb84365"
+
 redux-logger@^2.7.4:
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-2.10.2.tgz#3c5a5f0a6f32577c1deadf6655f257f82c6c3937"

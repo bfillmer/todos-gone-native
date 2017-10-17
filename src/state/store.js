@@ -1,8 +1,14 @@
 
 import {createStore} from 'redux'
+import {map} from 'redux-data-structures'
 
-const initialState = {}
+import {ADDED_TODO} from 'types'
 
-const reducer = (state = initialState, action) => state
+// @NOTE If the app grows in complexity we would move this to its own file, add depth
+// to our state, etc.
+const reducer = map({
+  addActionTypes: [ADDED_TODO],
+  keyGetter: action => action.payload.key
+})
 
 export const store = createStore(reducer)

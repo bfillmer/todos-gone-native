@@ -5,5 +5,8 @@ import {ADDED_TODO} from 'types'
 // for actions.
 export const addTodo = text => ({
   type: ADDED_TODO,
-  payload: text
+  payload: {
+    key: Math.random(),
+    text
+  }
 })

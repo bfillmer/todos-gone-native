@@ -27,6 +27,7 @@
     "react-native-button": "^2.1.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
+    "redux-data-structures": "^0.1.6",
     "styled-components": "^2.2.1"
   }
 }
