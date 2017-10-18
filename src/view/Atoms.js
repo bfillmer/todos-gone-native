@@ -11,7 +11,7 @@ export const Wrapper = styled.View`
 `
 
 const HeadlineText = styled.Text`
-  font-size: 20;
+  font-size: 25;
   font-weight: bold;
   color: ${getTheme('colors', 'highlight')};
   ${getTheme('containerPadding')}

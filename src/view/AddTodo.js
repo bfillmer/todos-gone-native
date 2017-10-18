@@ -12,6 +12,7 @@ const Wrapper = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
+  ${getTheme('containerPadding')}
 `
 
 const AddInput = styled.TextInput`
@@ -44,7 +45,10 @@ class Container extends Component {
   }
 
   handleSubmit () {
-    this.props.addTodo(this.state.text)
+    // Poor man's validation. Prevent empty todos.
+    if (this.state.text.length > 0) {
+      this.props.addTodo(this.state.text)
+    }
     this.setState({
       text: ''
     })

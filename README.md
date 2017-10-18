@@ -1,6 +1,7 @@
 # Todos Gone Native
 
 * styled-components (http://styled-components.com)
+* redux data structures (https://redux-data-structures.js.org/)
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 

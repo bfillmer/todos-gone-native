@@ -1,14 +1,24 @@
 
-import {createStore} from 'redux'
-import {map} from 'redux-data-structures'
+import {combineReducers, createStore} from 'redux'
+import {map, set} from 'redux-data-structures'
 
-import {ADDED_TODO} from 'types'
+import {ADDED_TODO, COMPLETED_TODO} from 'types'
 
-// @NOTE If the app grows in complexity we would move this to its own file, add depth
-// to our state, etc.
-const reducer = map({
+// Set of keys that represent complete todos.
+const completed = set({
+  toggleActionTypes: [COMPLETED_TODO]
+})
+
+// All our todo objects.
+const todos = map({
   addActionTypes: [ADDED_TODO],
   keyGetter: action => action.payload.key
 })
 
+const reducer = combineReducers({
+  completed,
+  todos
+})
+
+// @TODO Add redux-logger for the console in development mode.
 export const store = createStore(reducer)
