@@ -1,7 +1,15 @@
 # Todos Gone Native
 
+The typical todo application as a way to get the feet wet with something new. Small application, mostly to suss out some of the differences between React and React Native.
+
+<img src="https://user-images.githubusercontent.com/33235/31715559-9ef8bd88-b3c1-11e7-8478-17b6454bdbd5.png" width="250" style="float: left">
+
+### Libraries
+
 * styled-components (http://styled-components.com)
 * redux data structures (https://redux-data-structures.js.org/)
+
+### Create React Native App Readme
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
